@@ -4,6 +4,7 @@ import {NavBar} from './components/NavBar';
 import Banner from './components/Banner';
 import {Skills} from './components/Skills';
 import {Projects} from './components/Projects';
+import {Newsletter} from './components/Newsletter';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Footer} from './components/footer';
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Banner />
       <Skills />
       <Projects />
+      <Newsletter onValidated={() => {}} status={null} message={null} />
       <Footer />
     </div>
   );
