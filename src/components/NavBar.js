@@ -39,9 +39,9 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-                <a href="#"><img src={navIcon1} alt="LinkedIn" /></a>
-                <a href="#"><img src={navIcon2} alt="GitHub" /></a>
-                <a href="#"><img src={navIcon3} alt="Twitter" /></a>
+                <a href="#Linkedin"><img src={navIcon1} alt="LinkedIn" /></a>
+                <a href="#GitHub"><img src={navIcon2} alt="GitHub" /></a>
+                <a href="#Twitter"><img src={navIcon3} alt="Twitter" /></a>
                 </div>
                 <button className="vvd" onClick={() => console.log('connect')}><span>Let’s Connect</span></button>
             </span>

@@ -35,19 +35,19 @@ return (
                 <p>lorem ipsum dolor sit amet</p>
                 <Carousel responsive={responsive} infinite={true} className="skill-slider">
                   <div className="item">
-                    <img src={meter1} alt="Image"/>
+                    <img src={meter1} />
                     <h5>Web Development</h5>
                   </div>
                   <div className="item">
-                    <img src={meter2} alt="Image"/>
+                    <img src={meter2} />
                     <h5>Brand Identity</h5>
                   </div>
                   <div className="item">
-                    <img src={meter3 } alt="Image"/>
+                    <img src={meter3 }  />
                     <h5>Logo Design</h5>
                   </div>
                   <div className="item">
-                    <img src={colorSharp} alt="Image"/>
+                    <img src={colorSharp} />
                     <h5>Color Theory</h5>
                   </div>
                   </Carousel>
@@ -56,7 +56,7 @@ return (
             </Col>
         </Row>
     </Container>
-    <img className="background-image-left" src={colorSharp} alt="Image"/>
+    <img className="background-image-left" src={colorSharp} />
         </section>
 )
 };
