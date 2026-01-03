@@ -1,57 +1,65 @@
 import { useState, useEffect } from "react";
-import { Container,Row ,Col } from "react-bootstrap"
-import {ArrowRightCircle} from 'react-bootstrap-icons';
-import headerImg from '../assets/header-img.svg';   
-const Banner = () => {
-    const [loopNum, setLoopNum] = useState(0);
-    const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = [ "web developer", "web designer", "UI/UX Designer" ];
-    const [text, setText] = useState(''); 
-    const period = 2000;
-    const [delta, setDelta] = useState(300 - Math.random() * 100);
+import { Container, Row, Col } from "react-bootstrap";
 
-    useEffect(() => {
-        let ticker = setInterval(() => {
-            tick();
-        }, delta)
-        return () => { clearInterval(ticker) };
-    }, [text,delta,tick])
+export const Banner = () => {
+  const [loopNum, setLoopNum] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [text, setText] = useState("");
+  const [delta, setDelta] = useState(300 - Math.random() * 100);
+
+  const toRotate = ["Web Developer", "React Developer", "Computer Science Student"];
+  const period = 2000;
+
+  useEffect(() => {
     const tick = () => {
-        let i = loopNum % toRotate.length;
-        let fullText = toRotate[i];
-        let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
-        setText(updatedText);
+      const i = loopNum % toRotate.length;
+      const fullText = toRotate[i];
 
-        if(isDeleting) {
-            setDelta(prevDelta => prevDelta / 2);
-        }
-        if(!isDeleting && updatedText === fullText) {
-            setIsDeleting(true);
-            setDelta(period);
-        } else if(isDeleting && updatedText === '') {
-            setIsDeleting(false);
-            setLoopNum(loopNum + 1);
-            setDelta(500);
-        }
+      const updatedText = isDeleting
+        ? fullText.substring(0, text.length - 1)
+        : fullText.substring(0, text.length + 1);
 
-    }
-    return (
-        <section className="banner" id="home">
-            <Container>
-                <Row className="align-items-center">
-                    <Col xs={12} md={6} xl={7}>
-                    <span className="tagline">Welcome to my Portfolio</span>
-                    <h1> {`Hi I'm Johan `}<span className="wrap">{text}</span></h1>
-                    <p>I'm a passionate web developer with experience in building dynamic and responsive web applications.</p>
-                    <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
-                    </Col>
-                    <Col xs={12} md={6} xl={5}>
-                    <img src={headerImg} alt="Header Img"/>
-                    </Col>
-                </Row>
-            </Container>
-        </section>
-    );
+      setText(updatedText);
+
+      if (isDeleting) {
+        setDelta((prevDelta) => prevDelta / 2);
+      }
+
+      if (!isDeleting && updatedText === fullText) {
+        setIsDeleting(true);
+        setDelta(period);
+      } else if (isDeleting && updatedText === "") {
+        setIsDeleting(false);
+        setLoopNum((prev) => prev + 1);
+        setDelta(500);
+      }
+    };
+
+    const ticker = setInterval(tick, delta);
+    return () => clearInterval(ticker);
+  }, [text, delta, isDeleting, loopNum, toRotate, period]);
+
+  return (
+    <section className="banner" id="home">
+      <Container>
+        <Row className="align-items-center">
+          <Col xs={12} md={6} xl={7}>
+            <span className="tagline">Welcome to my Portfolio</span>
+            <h1>
+              {`Hi! I'm Johan `}
+              <span className="wrap">{text}</span>
+            </h1>
+            <p>
+              Computer Science Engineering student with experience in React,
+              Python, and web development. Passionate about building clean,
+              user-friendly applications.
+            </p>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+  );
 };
+
 
 export default Banner;
