@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 export const Banner = () => {
@@ -7,8 +7,13 @@ export const Banner = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
 
-  const toRotate = ["Web Developer", "React Developer", "Computer Science Student"];
   const period = 2000;
+
+  // ✅ Memorized to avoid exhaustive-deps warning
+  const toRotate = useMemo(
+    () => ["Web Developer", "React Developer", "Computer Science Student"],
+    []
+  );
 
   useEffect(() => {
     const tick = () => {
@@ -22,7 +27,7 @@ export const Banner = () => {
       setText(updatedText);
 
       if (isDeleting) {
-        setDelta((prevDelta) => prevDelta / 2);
+        setDelta((prev) => prev / 2);
       }
 
       if (!isDeleting && updatedText === fullText) {
@@ -46,13 +51,11 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <span className="tagline">Welcome to my Portfolio</span>
             <h1>
-              {`Hi! I'm Johan `}
-              <span className="wrap">{text}</span>
+              Hi! I'm Johan <span className="wrap">{text}</span>
             </h1>
             <p>
               Computer Science Engineering student with experience in React,
-              Python, and web development. Passionate about building clean,
-              user-friendly applications.
+              Python, and modern web development.
             </p>
           </Col>
         </Row>
