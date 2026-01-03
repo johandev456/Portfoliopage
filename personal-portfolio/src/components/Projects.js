@@ -13,13 +13,13 @@ export const Projects = () => {
             imgUrl: projImg1
         },
         {
-            title: "Project One",
-            description: "Description for project one.",
+            title: "Project Two",
+            description: "Description for project two.",
             imgUrl: projImg2
         },
         {
-            title: "Project One",
-            description: "Description for project one.",
+            title: "Project Three",
+            description: "Description for project three.",
             imgUrl: projImg3
         },
         {
