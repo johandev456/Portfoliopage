@@ -1,21 +1,28 @@
+// Banner con efecto de máquina de escribir para roles
 import { useState, useEffect, useMemo } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 export const Banner = () => {
+  // Índice actual de la frase
   const [loopNum, setLoopNum] = useState(0);
+  // Estado de borrado del texto
   const [isDeleting, setIsDeleting] = useState(false);
+  // Texto mostrado
   const [text, setText] = useState("");
+  // Intervalo en ms (se ajusta dinámicamente)
   const [delta, setDelta] = useState(300 - Math.random() * 100);
 
+  // Pausa antes de borrar
   const period = 2000;
 
-  // ✅ Memorized to avoid exhaustive-deps warning
+  // Lista de roles
   const toRotate = useMemo(
-    () => ["Web Developer", "React Developer", "Computer Science Student"],
+    () => ["Desarrollador Web", "Desarrollador React", "Estudiante de Ciencias de la Computación"],
     []
   );
 
   useEffect(() => {
+    // Avanza el efecto de escritura/borrado
     const tick = () => {
       const i = loopNum % toRotate.length;
       const fullText = toRotate[i];
@@ -49,13 +56,13 @@ export const Banner = () => {
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
-            <span className="tagline">Welcome to my Portfolio</span>
+            <span className="tagline">Bienvenido a mi Portafolio</span>
             <h1>
-              Hi! I'm Johan <span className="wrap">{text}</span>
+              ¡Hola! Soy Johan <span className="wrap">{text}</span>
             </h1>
             <p>
-              Computer Science Engineering student with experience in React,
-              Python, and modern web development.
+              Estudiante de Ingeniería en Ciencias de la Computación con experiencia en React,
+              Python y desarrollo web moderno.
             </p>
           </Col>
         </Row>

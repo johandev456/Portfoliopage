@@ -14,11 +14,11 @@ export const Footer = () => {
                     </Col>
                     <Col sm={6} className="text-center text-sm-end">
                     <div className="social-icon">
-                        <a href="/"><img src={navIcon1} alt="Social Icon 1" /></a>
-                        <a href="/"><img src={navIcon2} alt="Social Icon 2" /></a>
-                        <a href="/"><img src={navIcon3} alt="Social Icon 3" /></a>
+                        <a href="/"><img src={navIcon1} alt="Icono social 1" /></a>
+                        <a href="/"><img src={navIcon2} alt="Icono social 2" /></a>
+                        <a href="/"><img src={navIcon3} alt="Icono social 3" /></a>
                         </div>
-                        <p>Copyright 2025. All Rights Reserved to GreatnessBuilder</p>
+                        <p>© 2025. Todos los derechos reservados a GreatnessBuilder</p>
                     </Col>
                 </Row>
             </Container>

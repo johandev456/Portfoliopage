@@ -31,36 +31,36 @@ export const Skills = () => {
         <Row>
           <Col>
             <div className="skill-bx">
-              <h2>Skills</h2>
+              <h2>Habilidades</h2>
               <p>
-                Technologies and tools I work with to build modern, scalable,
-                and user-friendly applications.
+                Tecnologías y herramientas con las que trabajo para construir aplicaciones modernas,
+                escalables y fáciles de usar.
               </p>
 
               <Carousel responsive={responsive} infinite className="skill-slider">
                 <div className="item">
-                  <img src={meter1} alt="Frontend development skill level" />
-                  <h5>Frontend Development</h5>
+                  <img src={meter1} alt="Nivel de desarrollo frontend" />
+                  <h5>Desarrollo Frontend</h5>
                 </div>
 
                 <div className="item">
-                  <img src={meter2} alt="Backend development skill level" />
-                  <h5>Backend Development</h5>
+                  <img src={meter2} alt="Nivel de desarrollo backend" />
+                  <h5>Desarrollo Backend</h5>
                 </div>
 
                 <div className="item">
-                  <img src={meter3} alt="UI and UX design skill level" />
-                  <h5>UI / UX Design</h5>
+                  <img src={meter3} alt="Nivel de diseño UI y UX" />
+                  <h5>Diseño UI / UX</h5>
                 </div>
 
                 <div className="item">
-                  <img src={meter2} alt="Database and data handling skill level" />
-                  <h5>Databases</h5>
+                  <img src={meter2} alt="Nivel de bases de datos y manejo de datos" />
+                  <h5>Bases de Datos</h5>
                 </div>
 
                 <div className="item">
-                  <img src={meter1} alt="Problem solving and algorithms skill level" />
-                  <h5>Problem Solving</h5>
+                  <img src={meter1} alt="Nivel de resolución de problemas y algoritmos" />
+                  <h5>Resolución de Problemas</h5>
                 </div>
               </Carousel>
             </div>

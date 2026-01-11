@@ -8,33 +8,33 @@ export const Projects = () => {
     
     const projects = [
         {
-            title: "Project One",
-            description: "Description for project one.",
+            title: "Proyecto Uno",
+            description: "Descripción del proyecto uno.",
             imgUrl: projImg1
         },
         {
-            title: "Project Two",
-            description: "Description for project two.",
+            title: "Proyecto Dos",
+            description: "Descripción del proyecto dos.",
             imgUrl: projImg2
         },
         {
-            title: "Project Three",
-            description: "Description for project three.",
+            title: "Proyecto Tres",
+            description: "Descripción del proyecto tres.",
             imgUrl: projImg3
         },
         {
-            title: "Project One",
-            description: "Description for project one.",
+            title: "Proyecto Uno",
+            description: "Descripción del proyecto uno.",
             imgUrl: projImg1
         },
         {
-            title: "Project One",
-            description: "Description for project one.",
+            title: "Proyecto Uno",
+            description: "Descripción del proyecto uno.",
             imgUrl: projImg2
         },
         {
-            title: "Project One",
-            description: "Description for project one.",
+            title: "Proyecto Uno",
+            description: "Descripción del proyecto uno.",
             imgUrl: projImg3
         }
     ]
@@ -43,19 +43,19 @@ export const Projects = () => {
             <Container>
                 <Row>
                     <Col>
-                        <h2>Projects</h2>
-                        <p>lorem ipsum dolor sit amet</p>
+                        <h2>Proyectos</h2>
+                        <p>Explora algunos de mis trabajos y proyectos recientes.</p>
                         <Tab.Container id="projects-tabs" defaultActiveKey="first">
                         <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                         <Nav.Item>
-                        <Nav.Link eventKey="first">Tab One</Nav.Link>
+                        <Nav.Link eventKey="first">Pestaña Uno</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                        <Nav.Link eventKey="second">Tab Two</Nav.Link>
+                        <Nav.Link eventKey="second">Pestaña Dos</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
                         <Nav.Link eventKey="third" >
-                        Tab Three
+                        Pestaña Tres
                         </Nav.Link>
                         </Nav.Item>
                         </Nav>
@@ -75,10 +75,10 @@ export const Projects = () => {
                             </Row>
                             </Tab.Pane>
                         <Tab.Pane eventKey="second">
-                            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget consectetur sagittis, nisl nunc.</p>
+                            <p>Contenido de ejemplo para la segunda pestaña.</p>
                         </Tab.Pane>
                         <Tab.Pane eventKey="third">
-                            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget consectetur sagittis, nisl nunc.</p>
+                            <p>Contenido de ejemplo para la tercera pestaña.</p>
                         </Tab.Pane>
                             </Tab.Content>
                         </Tab.Container>
